@@ -5,5 +5,5 @@ from django.shortcuts import render
 #           implementa por defecto los token CSRF - Cross Site Scripting
 # Response: Cuando enviamos datos de la vista a la plantilla
 
-def index(request):
-    return render(request,"index.html")
+def login(request):
+    return render(request,"login.html")

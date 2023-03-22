@@ -20,8 +20,7 @@ body{
     padding: 20px 100px;
 }
 
-.container::after{
-    
+.container::after{ 
     content: '';
     position: absolute;
     left: 0;
@@ -35,6 +34,7 @@ body{
 
 }
 .contact-box{
+    margin-top:100px; 
 	max-width: 850px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
