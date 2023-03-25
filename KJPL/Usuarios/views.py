@@ -4,17 +4,17 @@ from Usuarios.models import Usuarios
 # Create your views here.
 def CrearUsuario(request):
     if request.method == 'POST':
-        Dni = request.POST['dni']
-        APaterno = request.POST['aPaterno']
-        AMaterno = request.POST['aMaterno']
-        Nombres = request.POST['nombre']
-        FNacimiento = request.POST['fNacimiento']
+        dni = request.POST['dni']
+        APaterno = request.POST['apellidoPaterno']
+        AMaterno = request.POST['apellidoMaterno']
+        Nombres = request.POST['nombres']
+        FNacimiento = request.POST['fechaNacimiento']
         Sexo = request.POST['sexo']
-        TUsuario = request.POST['tUsuario']
+        TUsuario = request.POST['tipoUsuario']
 
-        librito = Usuarios(dni=Dni, aPaterno=APaterno, aMaterno=AMaterno, nombres=Nombres, fNacimiento=FNacimiento, sexo=Sexo, tUsuario=TUsuario)
-        librito.save()
+        User = Usuarios(dni=dni, apellidoPaterno=APaterno, apellidoMaterno=AMaterno, nombres=Nombres, fechaNacimiento=FNacimiento, sexo=Sexo, tipoUsuario=TUsuario)
+        User.save()
 
-        return render(request, "crearUsuario.html", {"dni": Dni})
+        return render(request, "crearUsuario.html", {"dni": dni})
     return render(request, "crearUsuario.html")
 
